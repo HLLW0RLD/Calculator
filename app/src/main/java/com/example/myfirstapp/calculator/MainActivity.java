@@ -14,10 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     Counter count = new Counter();
     private TextView txt;
-    private static final String ARG_RESULT = "ARG_RESULT";
+    public static final String ARG_RESULT = "ARG_RESULT";
 
     int num = count.getResult();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         num = savedInstanceState.getInt(ARG_RESULT);
     }
+
 
 
     public void showResult(int result){
