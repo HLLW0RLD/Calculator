@@ -138,19 +138,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt(ARG_RESULT, num);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        num = savedInstanceState.getInt(ARG_RESULT);
-    }
-
-
     public void showResult(int result){
         txt.setText(result);
     }
