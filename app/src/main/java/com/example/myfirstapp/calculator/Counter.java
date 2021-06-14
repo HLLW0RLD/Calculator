@@ -4,9 +4,13 @@ public class Counter {
 
     MainActivity main = new MainActivity();
 
-    private Integer result = 0;
-    private Integer firstNum = 0;
-    private Integer secondNum = 0;
+    public int getResult() {
+        return result;
+    }
+
+    private int result = 0;
+    private int firstNum = 0;
+    private int secondNum = 0;
     private Boolean isFirst = true;
 
     public void number(int key){
