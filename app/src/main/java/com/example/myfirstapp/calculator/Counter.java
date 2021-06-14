@@ -43,8 +43,4 @@ public class Counter {
                 break;
         }
     }
-
-    public Integer getResult() {
-        return result;
-    }
 }
