@@ -5,10 +5,10 @@ public class Counter {
     MainActivity main = new MainActivity();
 
     private Integer result = 0;
+
     private Integer firstNum = 0;
     private Integer secondNum = 0;
     private Boolean isFirst = true;
-
     public void number(int key){
         if (isFirst){
             result = firstNum * 10 + key;
@@ -42,5 +42,9 @@ public class Counter {
                 main.showResult(result);
                 break;
         }
+    }
+
+    public Integer getResult() {
+        return result;
     }
 }

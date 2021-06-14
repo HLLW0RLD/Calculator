@@ -1,5 +1,6 @@
 package com.example.myfirstapp.calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -13,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     Counter count = new Counter();
     private TextView txt;
+    private static final String ARG_RESULT = "ARG_RESULT";
+
+    int num = count.getResult();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +137,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(ARG_RESULT, num);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        num = savedInstanceState.getInt(ARG_RESULT);
+    }
+
 
     public void showResult(int result){
         txt.setText(result);
